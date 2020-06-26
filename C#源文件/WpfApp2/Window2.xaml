@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="重试选项" Height="169.779" Width="418.061" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Height="31" Margin="173,17,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox1_LostFocus" FontSize="15"/>
+        <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="31" Margin="173,53,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox2_LostFocus" FontSize="15"/>
+        <Label Content="失败副本的重试次数" HorizontalAlignment="Left" Height="28" Margin="13,17,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
+        <Label Content="两次重试间的等待时间" HorizontalAlignment="Left" Height="28" Margin="13,53,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
+        <Button Content="取消" HorizontalAlignment="Left" Height="30" Margin="18,89,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_1" FontSize="15"/>
+        <Button Content="确定" HorizontalAlignment="Left" Height="30" Margin="216,89,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click" FontSize="15"/>
+
+    </Grid>
+</Window>

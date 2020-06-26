@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp2.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="关于" Height="320.019" Width="483.228" WindowStartupLocation="CenterScreen" UseLayoutRounding="False" ResizeMode="NoResize">
+    <Grid>
+        <TextBox
+    x:Name="mlbox"
+    AcceptsReturn="True"
+    AcceptsTab="True"
+    VerticalScrollBarVisibility="Auto" 
+    HorizontalScrollBarVisibility="Auto"  Margin="10,10,10,60" IsReadOnly="True" FontSize="15" TextWrapping="Wrap"
+            />
+        <Button Margin="389,232,10,10" Content="关闭" Click="Button_Click" FontSize="15" ></Button>
+        <RadioButton Content="前言" HorizontalAlignment="Left" Height="17" Margin="97,235,0,0" VerticalAlignment="Top" Width="50" GroupName="1" Checked="RadioButton_Checked" FontSize="15"/>
+        <RadioButton Content="选项说明" HorizontalAlignment="Left" Height="17" Margin="171,235,0,0" VerticalAlignment="Top" Width="87" GroupName="1" Checked="RadioButton_Checked_2" FontSize="15" RenderTransformOrigin="0.414,0.52"/>
+        <RadioButton Content="更新日志" HorizontalAlignment="Left" Height="17" Margin="10,255,0,0" VerticalAlignment="Top" Width="84" GroupName="1" Checked="RadioButton_Checked_3" FontSize="15"/>
+        <RadioButton Content="关于" HorizontalAlignment="Left" Height="17" Margin="10,235,0,0" VerticalAlignment="Top" Width="50" GroupName="1" Checked="RadioButton_Checked_1" IsChecked="True" FontSize="15"/>
+        <RadioButton x:Name="R1" Content="主程序日志" HorizontalAlignment="Left" Height="19" Margin="157,255,0,0" VerticalAlignment="Top" Width="102" FontSize="15" GroupName="1" Checked="RadioButton_Checked_4"/>
+        <Button Margin="269,232,99,10" Content="清空程序日志" Click="Button_Click_1" FontSize="15" />
+
+    </Grid>
+</Window>

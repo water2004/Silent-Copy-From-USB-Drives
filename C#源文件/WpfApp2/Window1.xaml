@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="文件选择选项" Height="294.432" Width="461.655" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid x:Name="Window2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="T1" HorizontalAlignment="Left" Height="28" Margin="210,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="T1_LostFocus" FontSize="15" TextChanged="T1_TextChanged"/>
+        <TextBox x:Name="T2" HorizontalAlignment="Left" Height="28" Margin="210,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="T2_LostFocus" FontSize="15" TextChanged="T2_TextChanged"/>
+        <TextBox x:Name="T3" HorizontalAlignment="Left" Height="28" Margin="210,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="T3_LostFocus" FontSize="15"/>
+        <TextBox x:Name="T4" HorizontalAlignment="Left" Height="28" Margin="210,116,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="T4_LostFocus" FontSize="15"/>
+        <DatePicker x:Name="T5" HorizontalAlignment="Left" Height="28" Margin="210,148,0,0" VerticalAlignment="Top" Width="218" ForceCursor="True" FontSize="15" SelectedDateFormat="Long"/>
+        <DatePicker x:Name="T6" HorizontalAlignment="Left" Height="28" Margin="210,179,0,0" VerticalAlignment="Top" Width="218" FontSize="15" SelectedDateFormat="Long"/>
+        <CheckBox x:Name="Checkbox1" Content="最大的最后访问日期" HorizontalAlignment="Left" Height="28" Margin="20,152,0,0" VerticalAlignment="Top" Width="156" Checked="Checkbox1_Checked" Unchecked="Checkbox1_Unchecked" FontSize="15"/>
+        <CheckBox x:Name="Checkbox2" Content="最小的最后访问日期" HorizontalAlignment="Left" Height="28" Margin="20,183,0,0" VerticalAlignment="Top" Width="156" Checked="Checkbox2_Checked" Unchecked="Checkbox2_Unchecked" FontSize="15"/>
+        <Label x:Name="L1" Content="文件最大限制" HorizontalAlignment="Left" Height="28" Margin="20,19,0,0" VerticalAlignment="Top" Width="190" FontSize="15"/>
+        <Label x:Name="L2" Content="文件最小限制" HorizontalAlignment="Left" Height="28" Margin="20,52,0,0" VerticalAlignment="Top" Width="190" FontSize="15"/>
+        <Label Content="最长的文件存在时间" HorizontalAlignment="Left" Height="28" Margin="20,84,0,0" VerticalAlignment="Top" Width="160" FontSize="15"/>
+        <Label Content="最短的文件存在时间" HorizontalAlignment="Left" Height="28" Margin="20,116,0,0" VerticalAlignment="Top" Width="160" FontSize="15"/>
+        <Button Content="取消" HorizontalAlignment="Left" Height="30" Margin="20,214,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_1" FontSize="15"/>
+        <Button Content="确定" HorizontalAlignment="Left" Height="30" Margin="253,213,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click" FontSize="15"/>
+
+    </Grid>
+</Window>
