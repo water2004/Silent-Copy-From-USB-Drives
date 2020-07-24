@@ -9,10 +9,12 @@
 + <font size=4> **GUI版运行需要安装 .NET 4.7.2！！！**</font>
   若未安装，请运行：“NDP472-KB4054530-x86-x64-AllOS-ENU.exe”安装<br>
 
-+ <font size=4> **4.7的setting.txt和其他版本的不兼容,不可互换！！！**</font>
++ <font size=4> **5.0的setting.txt和其他版本的不兼容,不可互换！！！**</font>
+
++ 由于使用了Qt，可能会导致兼容性问题
   
 
-## v 4.7.1更新内容
+## v 5.0.0更新内容
 
 + 增加主程序运行日志
 + 更改自动建立文件夹选项为可选
@@ -51,10 +53,16 @@
     <th>样例</th>
   </tr>
   <tr>
+  <td>文件源模式</td>
+  <td>按何种方式检测文件源</td>
+  <td>0:盘符，1:磁盘名称</td>
+  <td>0</td>
+  </tr>
+  <tr>
     <td>文件源</td>
-    <td>即从哪个文件夹复制，记得写卷标或绝对路径</td>
+    <td>即从哪个目录复制，写卷标或绝对路径或磁盘名称</td>
     <td>若留空，即自动检测盘符</td>
-    <td>C: D: E: F:\hhh\hhh</td>
+    <td>C: D: E: F:\hhh\hhh EFI</td>
   </tr>
   <tr>
     <td>文件名</td>
@@ -152,7 +160,13 @@
     <td>1或2(1 代表建立， 2 代表不建立)</td>
     <td>1</td>
   </tr>
+  <tr>
+  <td>复制前的等待时间</td>
+  <td>检测到磁盘可访问与开始复制之间的时间</td>
+  <td>数字，单位为秒</td>
+  <td>120</td>
+  </tr>
 </table>  
 
 ## 运行截图
-<center><img src="https://s1.ax1x.com/2020/04/22/Jtbh5Q.png" style="zoom:80%" /></center>
+<center><img src="https://s1.ax1x.com/2020/07/22/UHSWuV.png" style="zoom:80%" /></center>

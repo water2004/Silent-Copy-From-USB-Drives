@@ -32,14 +32,14 @@ namespace WpfApp2
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            mlbox.Text = "前言：\n   此工具为本蒟蒻为特殊用途（搞笑？好玩？作死？请大神们自行脑补用途(提示：文件名))制作的。\n   此工具经测试可正确运行于Windows10(其他系统本蒟蒻就不知道了(懒得试。。。))。\n   使用C++编写主程序，wpf+C#.net实现图形化（本来用的是winform+VB.net，但嫌它做出来的东西丑...），使用命令行工具“ROBOCOPY”实现相关功能。\n   源代码也一并奉上,欢迎各位大神指导！如有雷同,纯属巧合！\n   最后，因使用此工具造成的损失本蒟蒻概不负责（甩锅）";
+            mlbox.Text = "前言：\n   此工具为本蒟蒻为特殊用途（搞笑？好玩？作死？请大神们自行脑补用途(提示：文件名))制作的。\n   此工具经测试可正确运行于Windows10(其他系统本蒟蒻就不知道了(懒得试。。。))。\n   使用C++ & Qt编写主程序，wpf+C#.net实现图形化，使用命令行工具“ROBOCOPY”实现相关功能。\n   源代码也一并奉上,欢迎各位大神指导！如有雷同,纯属巧合！\n   最后，因使用此工具造成的损失本蒟蒻概不负责（甩锅）";
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            mlbox.Text = "关于：\n\n重要！重要！重要！\n4.7的setting.txt和其他版本的不兼容！！！" +
-                "\n\n程序集名称：静默拷文件\n版本：4.7.1\n作者：某不知名蒟蒻\n版权：开源？" +
-                "\n\n新版本更新内容:\n微调主程序运行日志" +
+            mlbox.Text = "关于：\n\n重要！重要！重要！\n4.8的setting.txt和其他版本的不兼容！！！" +
+                "\n\n程序集名称：静默拷文件\n版本：4.8.0 beta\n作者：某不知名蒟蒻\n版权：开源？" +
+                "\n\n新版本更新内容:\n磁盘名称检查\n复制前等待时间" +
                 "\n\n使用方法：\n1、运行静默拷文件.exe，完成配置后，点击保存并启动按钮\n  （或者完成并保存配置后运行\"start.vbs\")\n2、u盘插入后，程序自动复制文件\n3、查看复制出来的文件，若有需要，支持查看程序运行日志";
         }
 
@@ -58,7 +58,8 @@ namespace WpfApp2
                 "\n\n日志文件：\n程序运行日志" +
                 "\n\n等待时间：\n两次检测u盘插入间的等待时间" +
                 "\n\n程序包间间隔：\n可以释放低速线路上的带宽，但复制速度会有所降低" +
-                "\n\n自动建立文件夹：\n自动在目标目录下新建文件夹并将文件存入其中";
+                "\n\n自动建立文件夹：\n自动在目标目录下新建文件夹并将文件存入其中" +
+                "\n\n复制前的等待时间：\n磁盘插入并可以访问后隔一段时间再复制（避免使用高峰占用磁盘带宽）";
         }
 
         private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
@@ -89,6 +90,7 @@ namespace WpfApp2
                 "\n\n4.6.6——2019.9.7\n修复相关问题" +
                 "\n\n4.7.0——2019.11.2\n增加主程序运行日志\n更改自动建立文件夹选项为可选" +
                 "\n\n4.7.1——2019.11.3\n微调主程序运行日志" +
+                "\n\n4.8.0——2020.7.22\n增加磁盘名称检查与复制前等待时间" +
                 "\n\n敬请期待...\n";
         }
 
@@ -107,8 +109,8 @@ namespace WpfApp2
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             System.IO.File.WriteAllText(@"main_log.txt", string.Empty);
-            if ((bool)R1.IsChecked) 
-            mlbox.Clear();
+            if ((bool)R1.IsChecked)
+                mlbox.Clear();
         }
     }
 }

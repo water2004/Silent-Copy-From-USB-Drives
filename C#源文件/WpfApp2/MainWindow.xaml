@@ -5,30 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="静默拷文件" Height="320.019" Width="483.228" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="20190730051516785_easyicon_net_256.ico" ResizeMode="NoResize">
+        Title="静默拷文件" Height="320.019" Width="557.065" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="20190730051516785_easyicon_net_256.ico" ResizeMode="NoResize">
     <Grid>
-        <GroupBox Header="文件将保存目录                                                                " HorizontalAlignment="Left" Height="70" Margin="22,13,0,0" VerticalAlignment="Top" Width="426" FontSize="15">
-            <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Height="28" Margin="16,11,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox1_LostFocus" FontSize="15"/>
+        <GroupBox Header="文件保存目录                                                                  " HorizontalAlignment="Left" Height="70" Margin="22,13,0,0" VerticalAlignment="Top" Width="512" FontSize="15">
+            <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Height="28" Margin="18,11,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="288" LostFocus="Textbox1_LostFocus" FontSize="15"/>
         </GroupBox>
-        <GroupBox Header="从以下目录复制                         " HorizontalAlignment="Left" Height="70" Margin="22,84,0,0" VerticalAlignment="Top" Width="257" FontSize="15">
-            <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="28" Margin="15,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox2_LostFocus" FontSize="15"/>
+        <GroupBox Header="复制源                                                             " HorizontalAlignment="Left" Height="70" Margin="22,84,0,0" VerticalAlignment="Top" Width="335" FontSize="15">
+            <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="28" Margin="18,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="287" LostFocus="Textbox2_LostFocus" FontSize="15" TextChanged="Textbox2_TextChanged"/>
         </GroupBox>
-        <GroupBox Header="复制以下文件                          " HorizontalAlignment="Left" Height="70" Margin="22,155,0,0" VerticalAlignment="Top" Width="257" FontSize="15">
-            <TextBox x:Name="Textbox3" HorizontalAlignment="Left" Height="28" Margin="18,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox3_LostFocus" FontSize="15"/>
+        <GroupBox Header="复制以下文件                          " HorizontalAlignment="Left" Height="70" Margin="22,155,0,0" VerticalAlignment="Top" Width="335" FontSize="15">
+            <TextBox x:Name="Textbox3" HorizontalAlignment="Left" Height="28" Margin="18,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="288" LostFocus="Textbox3_LostFocus" FontSize="15"/>
         </GroupBox>
-        <GroupBox Header="高级选项            " HorizontalAlignment="Left" Height="141" Margin="282,84,0,0" VerticalAlignment="Top" Width="166" FontSize="15">
-            <Button x:Name="B1" Content="文件选择选项" HorizontalAlignment="Left" Height="28" Margin="20,10,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click" FontSize="15"/>
+        <GroupBox Header="高级选项            " HorizontalAlignment="Left" Height="141" Margin="363,84,0,0" VerticalAlignment="Top" Width="171" FontSize="15">
+            <Button x:Name="B1" Content="文件选择选项" HorizontalAlignment="Left" Height="28" Margin="17,10,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click" FontSize="15"/>
         </GroupBox>
-        <Button x:Name="B2" Content="重试选项" HorizontalAlignment="Left" Height="28" Margin="308,152,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_1" FontSize="15"/>
-        <Button x:Name="B3" Content="其他选项" HorizontalAlignment="Left" Height="28" Margin="308,189,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_2" FontSize="15"/>
+        <Button x:Name="B2" Content="重试选项" HorizontalAlignment="Left" Height="28" Margin="386,152,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1" FontSize="15"/>
+        <Button x:Name="B3" Content="其他选项" HorizontalAlignment="Left" Height="28" Margin="387,189,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_2" FontSize="15"/>
         <Button x:Name="Button1" Content="保存配置" HorizontalAlignment="Left" Height="30" Margin="22,235,0,0" VerticalAlignment="Top" Width="140" Click="Button_Click_4" FontSize="15"/>
-        <Button x:Name="Button2" Content="保存并启动" HorizontalAlignment="Left" Height="30" Margin="308,235,0,0" VerticalAlignment="Top" Width="140" Click="Button_Click_3" FontSize="15"/>
-        <CheckBox x:Name="CheckBox1" Content="使用程序所在目录" HorizontalAlignment="Left" Height="34" Margin="143,15,0,0" VerticalAlignment="Top" Width="168" Checked="CheckBox1_Checked" Unchecked="CheckBox1_Unchecked" FontSize="15"/>
-        <CheckBox x:Name="CheckBox2" Content="自动检测盘符" HorizontalAlignment="Left" Height="30" Margin="138,86,0,0" VerticalAlignment="Top" Width="161" Checked="CheckBox2_Checked" Unchecked="CheckBox2_Unchecked" FontSize="15"/>
+        <Button x:Name="Button2" Content="保存并启动" HorizontalAlignment="Left" Height="30" Margin="389,235,0,0" VerticalAlignment="Top" Width="140" Click="Button_Click_3" FontSize="15"/>
+        <CheckBox x:Name="CheckBox1" Content="使用程序所在目录" HorizontalAlignment="Left" Height="34" Margin="127,16,0,0" VerticalAlignment="Top" Width="168" Checked="CheckBox1_Checked" Unchecked="CheckBox1_Unchecked" FontSize="15"/>
+        <CheckBox x:Name="CheckBox2" Content="自动检测盘符" HorizontalAlignment="Left" Height="30" Margin="225,86,0,0" VerticalAlignment="Top" Width="161" Checked="CheckBox2_Checked" Unchecked="CheckBox2_Unchecked" FontSize="15"/>
         <CheckBox x:Name="CheckBox3" Content="复制所有文件" HorizontalAlignment="Left" Height="32" Margin="124,158,0,0" VerticalAlignment="Top" Width="168" Checked="CheckBox_Checked" Unchecked="CheckBox3_Unchecked" FontSize="15"/>
-        <CheckBox x:Name="CheckBox4" Content="启用" HorizontalAlignment="Left" Height="25" Margin="353,87,0,0" VerticalAlignment="Top" Width="97" Checked="CheckBox_Checked_1" Unchecked="CheckBox_Unchecked" FontSize="15"/>
-        <Button x:Name="B5" Content="选择文件夹" HorizontalAlignment="Left" Height="28" Margin="308,43,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_5" FontSize="15"/>
-        <Button Content="重置配置" HorizontalAlignment="Left" Height="30" Margin="165,235,0,0" VerticalAlignment="Top" Width="140" Click="Button_Click_6" FontSize="15"/>
-        <CheckBox x:Name="CheckBox5" Content="自动建立文件夹" HorizontalAlignment="Left" Height="34" Margin="295,15,0,0" VerticalAlignment="Top" Width="168" Unchecked="CheckBox5_Unchecked" FontSize="15" Checked="CheckBox5_Checked"/>
+        <CheckBox x:Name="CheckBox4" Content="启用" HorizontalAlignment="Left" Height="25" Margin="437,87,0,0" VerticalAlignment="Top" Width="97" Checked="CheckBox_Checked_1" Unchecked="CheckBox_Unchecked" FontSize="15"/>
+        <Button x:Name="B5" Content="选择文件夹" HorizontalAlignment="Left" Height="28" Margin="387,43,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_5" FontSize="15"/>
+        <Button Content="重置配置" HorizontalAlignment="Left" Height="30" Margin="205,235,0,0" VerticalAlignment="Top" Width="140" Click="Button_Click_6" FontSize="15"/>
+        <CheckBox x:Name="CheckBox5" Content="自动建立文件夹" HorizontalAlignment="Left" Height="34" Margin="280,16,0,0" VerticalAlignment="Top" Width="168" Unchecked="CheckBox5_Unchecked" FontSize="15" Checked="CheckBox5_Checked"/>
+        <RadioButton x:Name="R1" Content="盘符" HorizontalAlignment="Left" Margin="84,87,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" GroupName="C" FontSize="15"/>
+        <RadioButton x:Name="R2" Content="磁盘名称" HorizontalAlignment="Left" Margin="140,86,0,0" VerticalAlignment="Top" GroupName="C" Checked="RadioButton_Checked_1" Unchecked="R2_Unchecked" FontSize="15"/>
     </Grid>
 </Window>

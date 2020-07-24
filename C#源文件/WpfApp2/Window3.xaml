@@ -5,20 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="其他选项" Height="253.047" Width="429.03" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="其他选项" Height="282.239" Width="429.03" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Label Content="复制文件夹的最大深度" HorizontalAlignment="Left" Height="28" Margin="18,18,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
         <Label Content="等待时间" HorizontalAlignment="Left" Height="28" Margin="18,135,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
         <Label Content="多线程复制的线程数" HorizontalAlignment="Left" Height="28" Margin="18,46,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
         <Label Content="程序包间的距离" HorizontalAlignment="Left" Height="28" Margin="18,75,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
         <Label Content="日志文件" HorizontalAlignment="Left" Height="28" Margin="18,104,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
-        <Button Content="取消" HorizontalAlignment="Left" Height="30" Margin="25,171,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_1" FontSize="15"/>
-        <Button Content="确定" HorizontalAlignment="Left" Height="30" Margin="222,171,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click" FontSize="15"/>
+        <Button Content="取消" HorizontalAlignment="Left" Height="30" Margin="25,206,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_1" FontSize="15"/>
+        <Button Content="确定" HorizontalAlignment="Left" Height="30" Margin="222,206,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click" FontSize="15"/>
         <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Height="26" Margin="179,18,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox1_LostFocus" FontSize="15"/>
         <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="26" Margin="179,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox2_LostFocus" FontSize="15"/>
         <TextBox x:Name="Textbox3" HorizontalAlignment="Left" Height="26" Margin="179,78,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox3_LostFocus" FontSize="15"/>
         <TextBox x:Name="Textbox4" HorizontalAlignment="Left" Height="26" Margin="179,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox4_LostFocus" FontSize="15"/>
-        <TextBox x:Name="Textbox5" HorizontalAlignment="Left" Height="26" Margin="179,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox5_LostFocus" FontSize="15"/>
+        <TextBox x:Name="Textbox5" HorizontalAlignment="Left" Height="26" Margin="179,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" LostFocus="Textbox5_LostFocus" FontSize="15" TextChanged="Textbox5_TextChanged"/>
+        <Label Content="复制前的等待时间" HorizontalAlignment="Left" Height="28" Margin="18,165,0,0" VerticalAlignment="Top" Width="191" FontSize="15"/>
+        <TextBox x:Name="Textbox6" HorizontalAlignment="Left" Height="26" Margin="179,168,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" FontSize="15" Loaded="Textbox6_Loaded" TextChanged="Textbox6_TextChanged"/>
 
     </Grid>
 </Window>

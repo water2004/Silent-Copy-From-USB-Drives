@@ -31,6 +31,7 @@ namespace WpfApp2
             Textbox3.Text = App.F4T3;
             Textbox4.Text = App.F4T4;
             Textbox5.Text = App.F4T5;
+            Textbox6.Text = App.F4T6;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -59,11 +60,18 @@ namespace WpfApp2
                 Textbox5.Focus();
                 return;
             }
+            if (Textbox6.Text != "" && !App.IsNumberic(Textbox6.Text))
+            {
+                MessageBox.Show("输入必须为合法的正整数", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                Textbox6.Focus();
+                return;
+            }
             App.F4T1 = Textbox1.Text;
             App.F4T2 = Textbox2.Text;
             App.F4T3 = Textbox3.Text;
             App.F4T4 = Textbox4.Text;
             App.F4T5 = Textbox5.Text;
+            App.F4T6 = Textbox6.Text;
             this.Close();
         }
 
@@ -95,6 +103,21 @@ namespace WpfApp2
         private void Textbox5_LostFocus(object sender, RoutedEventArgs e)
         {
             Textbox5.Text = Textbox5.Text.Trim();
+        }
+
+        private void Textbox5_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Textbox6_Loaded(object sender, RoutedEventArgs e)
+        {
+            Textbox6.Text = Textbox6.Text.Trim();
+        }
+
+        private void Textbox6_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,69 @@
+C:\Users\32154\Desktop\WpfApp2\bin\Release\WpfApp2.exe.config
+C:\Users\32154\Desktop\WpfApp2\bin\Release\WpfApp2.exe
+C:\Users\32154\Desktop\WpfApp2\bin\Release\WpfApp2.pdb
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.csprojAssemblyReference.cache
+C:\Users\32154\Desktop\WpfApp2\obj\Release\Interop.MSScriptControl.dll
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.csproj.ResolveComReference.cache
+C:\Users\32154\Desktop\WpfApp2\obj\Release\MainWindow.g.cs
+C:\Users\32154\Desktop\WpfApp2\obj\Release\Window1.g.cs
+C:\Users\32154\Desktop\WpfApp2\obj\Release\Window2.g.cs
+C:\Users\32154\Desktop\WpfApp2\obj\Release\Window3.g.cs
+C:\Users\32154\Desktop\WpfApp2\obj\Release\App.g.cs
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2_MarkupCompile.cache
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2_MarkupCompile.lref
+C:\Users\32154\Desktop\WpfApp2\obj\Release\MainWindow.baml
+C:\Users\32154\Desktop\WpfApp2\obj\Release\Window1.baml
+C:\Users\32154\Desktop\WpfApp2\obj\Release\Window2.baml
+C:\Users\32154\Desktop\WpfApp2\obj\Release\Window3.baml
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.g.resources
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.Properties.Resources.resources
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.csproj.GenerateResource.cache
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.csproj.CoreCompileInputs.cache
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.exe
+C:\Users\32154\Desktop\WpfApp2\obj\Release\WpfApp2.pdb
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\bin\Release\WpfApp2.exe.config
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\bin\Release\WpfApp2.exe
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\bin\Release\WpfApp2.pdb
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.csprojAssemblyReference.cache
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\Interop.MSScriptControl.dll
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.csproj.ResolveComReference.cache
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\MainWindow.g.cs
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\Window1.g.cs
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\Window2.g.cs
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\Window3.g.cs
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\App.g.cs
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2_MarkupCompile.cache
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2_MarkupCompile.lref
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\MainWindow.baml
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\Window1.baml
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\Window2.baml
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\Window3.baml
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.g.resources
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.Properties.Resources.resources
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.csproj.GenerateResource.cache
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.csproj.CoreCompileInputs.cache
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.exe
+D:\tools\DIY tools\静默拷文件\4.6.0\WpfApp2\obj\Release\WpfApp2.pdb
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\bin\Release\WpfApp2.exe.config
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\bin\Release\WpfApp2.exe
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\bin\Release\WpfApp2.pdb
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.csprojAssemblyReference.cache
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\Interop.MSScriptControl.dll
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.csproj.ResolveComReference.cache
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\MainWindow.g.cs
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\Window1.g.cs
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\Window2.g.cs
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\Window3.g.cs
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\App.g.cs
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2_MarkupCompile.cache
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2_MarkupCompile.lref
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\MainWindow.baml
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\Window1.baml
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\Window2.baml
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\Window3.baml
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.g.resources
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.Properties.Resources.resources
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.csproj.GenerateResource.cache
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.csproj.CoreCompileInputs.cache
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.exe
+I:\Application software\tools\DIY tools\静默拷文件\4.6.0\C#源文件\WpfApp2\obj\Release\WpfApp2.pdb

@@ -111,7 +111,8 @@ namespace WpfApp2
             StreamReader RT = new StreamReader(fs);
             RT.BaseStream.Seek(0, SeekOrigin.Begin);
             App.F1T1 = RT.ReadLine();
-            App.F1T2 = RT.ReadLine();
+            App.F1T2_1 = RT.ReadLine();
+            App.F1T2_2 = RT.ReadLine();
             App.F1T3 = RT.ReadLine();
             App.F2T1 = RT.ReadLine();
             App.F2T2 = RT.ReadLine();
@@ -126,6 +127,7 @@ namespace WpfApp2
             App.F4T3 = RT.ReadLine();
             App.F4T4 = RT.ReadLine();
             App.F4T5 = RT.ReadLine();
+            App.F4T6 = RT.ReadLine();
             if (RT.ReadLine() == "1") App.C1 = true;
             else App.C1 = false;
             if (RT.ReadLine() == "1") App.C2 = true;
@@ -140,9 +142,11 @@ namespace WpfApp2
             else App.C6 = false;
             if (RT.ReadLine() == "1") App.C7 = true;
             else App.C7 = false;
+            if (RT.ReadLine() == "1") App.C8 = true;
+            else App.C8 = false;
             RT.Close();
             Textbox1.Text = App.F1T1;
-            Textbox2.Text = App.F1T2;
+            Textbox2.Text = App.C8 ? App.F1T2_2 : App.F1T2_1;
             Textbox3.Text = App.F1T3;
             CheckBox1.IsChecked = App.C1;
             CheckBox2.IsChecked = App.C2;
@@ -155,6 +159,16 @@ namespace WpfApp2
             B1.IsEnabled = App.C4;
             B2.IsEnabled = App.C4;
             B3.IsEnabled = App.C4;
+            if (App.C8)
+            {
+                R1.IsChecked = false;
+                R2.IsChecked = true;
+            }
+            else
+            {
+                R2.IsChecked = false;
+                R1.IsChecked = true;
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -182,6 +196,13 @@ namespace WpfApp2
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             Button2.IsEnabled = false;
+            if ((bool)R2.IsChecked && Textbox2.Text == "")
+            {
+                System.Windows.MessageBox.Show("磁盘名称不能为空", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                Textbox2.Focus();
+                Button2.IsEnabled = true;
+                return;
+            }
             File.WriteAllText("setup.txt", String.Empty);
             File.WriteAllText("setting.txt", String.Empty);
             App.C1 = (bool)CheckBox1.IsChecked;
@@ -189,7 +210,9 @@ namespace WpfApp2
             App.C3 = (bool)CheckBox3.IsChecked;
             App.C4 = (bool)CheckBox4.IsChecked;
             App.F1T1 = Textbox1.Text;
-            App.F1T2 = Textbox2.Text;
+            if (App.C8)
+                App.F1T2_2 = Textbox2.Text;
+            else App.F1T2_1 = Textbox2.Text;
             App.F1T3 = Textbox3.Text;
             FileStream fs = new FileStream("setting.txt", FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter WT = new StreamWriter(fs);
@@ -198,7 +221,8 @@ namespace WpfApp2
             WT.BaseStream.Seek(0, SeekOrigin.Begin);
             //写入内容
             WT.WriteLine(App.F1T1);
-            WT.WriteLine(App.F1T2);
+            WT.WriteLine(App.F1T2_1);
+            WT.WriteLine(App.F1T2_2);
             WT.WriteLine(App.F1T3);
             WT.WriteLine(App.F2T1);
             WT.WriteLine(App.F2T2);
@@ -213,6 +237,7 @@ namespace WpfApp2
             WT.WriteLine(App.F4T3);
             WT.WriteLine(App.F4T4);
             WT.WriteLine(App.F4T5);
+            WT.WriteLine(App.F4T6);
             if (App.C1) WT.WriteLine("1");
             else WT.WriteLine("0");
             if (App.C2) WT.WriteLine("1");
@@ -223,7 +248,11 @@ namespace WpfApp2
             else WT.WriteLine("0");
             if (App.C5) WT.WriteLine("1");
             else WT.WriteLine("0");
+            if (App.C6) WT.WriteLine("1");
+            else WT.WriteLine("0");
             if (App.C7) WT.WriteLine("1");
+            else WT.WriteLine("0");
+            if (App.C8) WT.WriteLine("1");
             else WT.WriteLine("0");
             //关闭此文件
             WT.Flush();
@@ -233,11 +262,13 @@ namespace WpfApp2
             WT.Flush();
             //设置当前流的位置
             WT.BaseStream.Seek(0, SeekOrigin.Begin);
+            WT.WriteLine("文件源模式(0:盘符，1:磁盘名称)");
+            WT.WriteLine(App.C8 ? 1 : 0);
             WT.WriteLine("文件源");
-            if (!App.C2)
-                WT.WriteLine(App.F1T2);
-            else
+            if (App.C2 && CheckBox2.IsEnabled)
                 WT.WriteLine("");
+            else
+                WT.WriteLine(App.C8 ? App.F1T2_2 : App.F1T2_1);
             WT.WriteLine("文件名");
             if (!App.C3)
                 WT.WriteLine(App.F1T3);
@@ -314,6 +345,9 @@ namespace WpfApp2
             }
             WT.WriteLine("是否新建文件夹");
             WT.WriteLine(App.C7 ? 1 : 0);
+            WT.WriteLine("检测到磁盘插入后延迟复制的时间（s）");
+            if (App.C4) WT.WriteLine(App.F4T6);
+            else WT.WriteLine("");
             WT.Flush();
             WT.Close();
             WinExec("copy.exe", 0);
@@ -323,6 +357,13 @@ namespace WpfApp2
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             Button1.IsEnabled = false;
+            if ((bool)R2.IsChecked && Textbox2.Text == "")
+            {
+                System.Windows.MessageBox.Show("磁盘名称不能为空", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                Textbox2.Focus();
+                Button1.IsEnabled = true;
+                return;
+            }
             File.WriteAllText("setup.txt", String.Empty);
             File.WriteAllText("setting.txt", String.Empty);
             App.C1 = (bool)CheckBox1.IsChecked;
@@ -330,7 +371,9 @@ namespace WpfApp2
             App.C3 = (bool)CheckBox3.IsChecked;
             App.C4 = (bool)CheckBox4.IsChecked;
             App.F1T1 = Textbox1.Text;
-            App.F1T2 = Textbox2.Text;
+            if (App.C8)
+                App.F1T2_2 = Textbox2.Text;
+            else App.F1T2_1 = Textbox2.Text;
             App.F1T3 = Textbox3.Text;
             FileStream fs = new FileStream("setting.txt", FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter WT = new StreamWriter(fs);
@@ -339,7 +382,8 @@ namespace WpfApp2
             WT.BaseStream.Seek(0, SeekOrigin.Begin);
             //写入内容
             WT.WriteLine(App.F1T1);
-            WT.WriteLine(App.F1T2);
+            WT.WriteLine(App.F1T2_1);
+            WT.WriteLine(App.F1T2_2);
             WT.WriteLine(App.F1T3);
             WT.WriteLine(App.F2T1);
             WT.WriteLine(App.F2T2);
@@ -354,6 +398,7 @@ namespace WpfApp2
             WT.WriteLine(App.F4T3);
             WT.WriteLine(App.F4T4);
             WT.WriteLine(App.F4T5);
+            WT.WriteLine(App.F4T6);
             if (App.C1) WT.WriteLine("1");
             else WT.WriteLine("0");
             if (App.C2) WT.WriteLine("1");
@@ -364,7 +409,11 @@ namespace WpfApp2
             else WT.WriteLine("0");
             if (App.C5) WT.WriteLine("1");
             else WT.WriteLine("0");
+            if (App.C6) WT.WriteLine("1");
+            else WT.WriteLine("0");
             if (App.C7) WT.WriteLine("1");
+            else WT.WriteLine("0");
+            if (App.C8) WT.WriteLine("1");
             else WT.WriteLine("0");
             //关闭此文件
             WT.Flush();
@@ -374,11 +423,13 @@ namespace WpfApp2
             WT.Flush();
             //设置当前流的位置
             WT.BaseStream.Seek(0, SeekOrigin.Begin);
+            WT.WriteLine("文件源模式(0:盘符，1:磁盘名称)");
+            WT.WriteLine(App.C8 ? 1 : 0);
             WT.WriteLine("文件源");
-            if (!App.C2)
-                WT.WriteLine(App.F1T2);
-            else
+            if (App.C2 && CheckBox2.IsEnabled)
                 WT.WriteLine("");
+            else
+                WT.WriteLine(App.C8 ? App.F1T2_2 : App.F1T2_1);
             WT.WriteLine("文件名");
             if (!App.C3)
                 WT.WriteLine(App.F1T3);
@@ -455,6 +506,9 @@ namespace WpfApp2
             }
             WT.WriteLine("是否新建文件夹");
             WT.WriteLine(App.C7 ? 1 : 0);
+            WT.WriteLine("检测到磁盘插入后延迟复制的时间（s）");
+            if (App.C4) WT.WriteLine(App.F4T6);
+            else WT.WriteLine("");
             WT.Flush();
             WT.Close();
             Button1.IsEnabled = true;
@@ -468,6 +522,11 @@ namespace WpfApp2
 
         private void CheckBox2_Checked(object sender, RoutedEventArgs e)
         {
+            if ((bool)R2.IsChecked)
+            {
+                CheckBox2.IsChecked = false;
+                return;
+            }
             Textbox2.IsEnabled = false;
         }
 
@@ -552,7 +611,8 @@ namespace WpfApp2
             StreamReader RT = new StreamReader(fs);
             RT.BaseStream.Seek(0, SeekOrigin.Begin);
             App.F1T1 = RT.ReadLine();
-            App.F1T2 = RT.ReadLine();
+            App.F1T2_1 = RT.ReadLine();
+            App.F1T2_2 = RT.ReadLine();
             App.F1T3 = RT.ReadLine();
             App.F2T1 = RT.ReadLine();
             App.F2T2 = RT.ReadLine();
@@ -567,6 +627,7 @@ namespace WpfApp2
             App.F4T3 = RT.ReadLine();
             App.F4T4 = RT.ReadLine();
             App.F4T5 = RT.ReadLine();
+            App.F4T6 = RT.ReadLine();
             if (RT.ReadLine() == "1") App.C1 = true;
             else App.C1 = false;
             if (RT.ReadLine() == "1") App.C2 = true;
@@ -581,9 +642,11 @@ namespace WpfApp2
             else App.C6 = false;
             if (RT.ReadLine() == "1") App.C7 = true;
             else App.C7 = false;
+            if (RT.ReadLine() == "1") App.C8 = true;
+            else App.C8 = false;
             RT.Close();
             Textbox1.Text = App.F1T1;
-            Textbox2.Text = App.F1T2;
+            Textbox2.Text = App.C8 ? App.F1T2_2 : App.F1T2_1;
             Textbox3.Text = App.F1T3;
             CheckBox1.IsChecked = App.C1;
             CheckBox2.IsChecked = App.C2;
@@ -596,6 +659,8 @@ namespace WpfApp2
             B1.IsEnabled = App.C4;
             B2.IsEnabled = App.C4;
             B3.IsEnabled = App.C4;
+            if (App.C8) R2.IsChecked = true;
+            else R1.IsChecked = true;
             if (W1 != null) W1.Close();
             if (W2 != null) W2.Close();
             if (W3 != null) W3.Close();
@@ -609,6 +674,37 @@ namespace WpfApp2
         private void CheckBox5_Unchecked(object sender, RoutedEventArgs e)
         {
             App.C7 = false;
+        }
+
+        private void CheckBox_Checked_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            CheckBox2.IsEnabled = false;
+            App.C8 = true;
+            Textbox2.Text = App.F1T2_2;
+            Textbox2.IsEnabled = true;
+        }
+
+        private void R2_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox2.IsEnabled = true;
+            App.C8 = false;
+            Textbox2.Text = App.F1T2_1;
+            if ((bool)CheckBox2.IsChecked) Textbox2.IsEnabled = false;
+        }
+
+        private void Textbox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
